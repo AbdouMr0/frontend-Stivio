@@ -1,0 +1,68 @@
+à
+.StivioImage{
+    width: 1000px;
+}
+.Image{
+    width: 100%;
+    height:90vh;
+    position: absolute;
+    border-radius: 10px;
+}
+.parent-link-see {
+    position: relative; /* Required for absolute positioning of child elements */
+    height: 90vh; /* Ensure this matches the height of the image or adjust as needed */
+}
+
+.link-see {
+    position: absolute;
+    left: 50%; /* Centers horizontally within the parent */
+    transform: translateX(-50%); /* Adjusts for element width */
+    bottom: 15px; /* Fixes the distance from the bottom */
+    color: white; /* Sets the text color to white */
+    text-decoration: underline; /* Optional: makes the link stand out */
+    margin: 0; /* Removes extra margin to control placement */
+    padding: 15px;
+    font-size: 45px;
+    border: 5px solid white; /* Adds a white border with 5px width */
+    text-align: center;
+    background-color: transparent; /* Ensures the background is transparent */
+}
+.see-icon{
+    margin-left: 130px;
+}
+.catclthes{
+    border: solid 4px white;
+    text-decoration: solid;
+    width: 130px;
+    padding-left: 20px;
+    font-size: 30px;
+    font-weight: 900;
+}
+.catclothesJackets{
+    border: solid 4px white;
+    text-decoration: solid;
+    width: 150px;
+    padding-left: 20px;
+    font-size: 30px;
+    font-weight: 900;
+}
+.catclothesTracksuit{
+    border: solid 4px white;
+    text-decoration: solid;
+    width: 180px;
+    margin-left: 5px;
+    font-size: 30px;
+    font-weight: 900;
+}
+@media  screen and (max-width:850px){
+   .catclthes, .catclothesJackets{
+    font-size: 25px;
+    position: relative;
+    margin-left:-100px;
+   }
+   .catclothesTracksuit{
+    margin-left:-80px ;
+    font-size: 25px;
+    width: 135px;
+   }
+}
