@@ -193,11 +193,20 @@ const OrderPage = () => {
                   key={index}
                   className="flex mb-4 p-4 border border-gray-300 rounded-lg shadow-sm bg-gray-50"
                 >
-                  <img
+                  {/* className="w-24 h-24 object-cover rounded-lg mr-4" */}
+                  {/* <img
+                    key={product.id}
                     src={`https://backend-stivio.onrender.com${product.image_url}`}
                     alt={product.name}
-                    className="w-24 h-24 object-cover rounded-lg mr-4"
-                  />
+                  /> */}
+                 <img
+                  key={index}
+                  src={`https://backend-stivio.onrender.com${product.image_url}`}
+                  alt={product.name}
+                  className="w-24 h-24 object-cover rounded-lg mr-4"
+                  onError={(e) => {console.log("you can not see image") }}
+            />
+
                   <div className="flex-1">
                     <h4 className="text-lg font-semibold">{product.name}</h4>
                     <p className="text-gray-600 mb-1">{product.description}</p>
