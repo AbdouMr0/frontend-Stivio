@@ -107,7 +107,7 @@ const OrderPage = () => {
     try {
       setLoadingOrder(true);
       const response = await axios.post(
-        "http://localhost:8000/clotheswebsite/order/",
+        "https://backend-stivio.onrender.com/clotheswebsite/order/",
         orderData,
         {
           headers: {

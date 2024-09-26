@@ -29,7 +29,7 @@ const Modal = ({ isOpen, onClose }) => {
                 className="flex mb-4 p-2 border-b border-gray-300"
               >
                 <img
-                  src={`http://localhost:8000${product.image_url}`}
+                  src={`https://backend-stivio.onrender.com${product.image_url}`}
                   alt={product.name}
                   className="w-24 h-24 object-cover rounded-lg mr-4"
                 />

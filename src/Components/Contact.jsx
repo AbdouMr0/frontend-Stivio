@@ -28,7 +28,7 @@ const Contact = () => {
     
     // Handle form submission logic here (e.g., send data to an API or email service)
     try {
-      const response = await axios.post('http://127.0.0.1:8000/clotheswebsite/contact/', formData, {
+      const response = await axios.post('https://backend-stivio.onrender.com/clotheswebsite/contact/', formData, {
         headers: {
           'Content-Type': 'application/json'
         }

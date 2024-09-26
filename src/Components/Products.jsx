@@ -21,7 +21,7 @@ const Products = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get("http://127.0.0.1:8000/clotheswebsite/products/");
+        const response = await axios.get("https://backend-stivio.onrender.com/clotheswebsite/products/");
         setProducts(response.data);
         const params = new URLSearchParams(location.search);
         const categoryFromParams = params.get('category');

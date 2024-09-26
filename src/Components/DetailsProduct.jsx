@@ -22,7 +22,7 @@ const DetailsProduct = () => {
     const fetchDetails = async () => {
       try {
         const response = await axios.get(
-          `http://127.0.0.1:8000/clotheswebsite/products/${id}/`
+          `https://backend-stivio.onrender.com/clotheswebsite/products/${id}/`
         );
         setDetailClothe(response.data);
       } catch (error) {
@@ -85,7 +85,7 @@ const DetailsProduct = () => {
               <IoArrowBackSharp className="text-white bg-black text-2xl rounded" />
             </Link>
             <img
-              src={`http://localhost:8000${detailClothe.image_url}`}
+              src={`https://backend-stivio.onrender.com${detailClothe.image_url}`}
               alt={detailClothe.name}
               className="w-full h-auto rounded-lg object-cover"
             />
@@ -99,7 +99,7 @@ const DetailsProduct = () => {
                 Description :
               </span>
               <p> {detailClothe.description}</p>
-            </p>
+            </p>-
             <div className="mb-4">
               <h4 className="mb-3 font-medium font-serif">Select your size:</h4>
               {available_sizes.split(",").map((letter, index) => (
