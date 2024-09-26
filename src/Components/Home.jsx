@@ -1,9 +1,7 @@
 import React from "react";
 import "./home.css";
 import NavBra from "./NavBra";
-import HomeImage from "./Images/Stivio Pictures.jpg";
 import { Link } from "react-router-dom";
-import { IoArrowBack } from "react-icons/io5";
 import Carousel from "./Carousel";
 import ImageJeans from "./Images/ImageJeans.jpg";
 import ImageTshirts from "./Images/Image Tshirts.jpg";
