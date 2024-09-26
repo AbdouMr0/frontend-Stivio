@@ -3,9 +3,8 @@ import axios from "axios"; // Import axios
 import { useCart } from "./CartContext"; // Import CartContext to access cart data
 import OptionWilaya from "./OptionWilaya";
 import NavBra from "./NavBra";
-import  DilevryImage from './Images/Dilevry.png'
+import DilevryImage from "./Images/Dilevry.png";
 import { GrStatusGood } from "react-icons/gr";
-
 
 const OrderPage = () => {
   const { cart, removeFromCart } = useCart(); // Get cart items and removeFromCart function from context
@@ -118,7 +117,7 @@ const OrderPage = () => {
 
       if (response.status === 200) {
         setSuccessOrder(true);
-        setLoadingOrder(false)
+        setLoadingOrder(false);
       } else {
         alert("Failed to place order.");
       }
@@ -131,15 +130,20 @@ const OrderPage = () => {
     <>
       <NavBra />
       <div className="pt-5 shadow">
-        {successOrder ? 
-        <div className="flex justify-center rounded-lg shadow">
-            <img src={DilevryImage} alt="dilevry" className="siz-16 h-50 w-50" />
-            <p className="text-4xl text-gray-600 pt-5 absolute">Your order has been success <span></span> </p>
+        {successOrder ? (
+          <div className="flex justify-center rounded-lg shadow">
+            <img
+              src={DilevryImage}
+              alt="dilevry"
+              className="siz-16 h-50 w-50"
+            />
+            <p className="text-4xl text-gray-600 pt-5 absolute">
+              Your order has been success <span></span>{" "}
+            </p>
             <GrStatusGood className="absolute text-gray-600 text-3xl top-[240px]" />
-            
-        </div>
-            :
-            <div className="p-6 pt-5 max-w-4xl mx-auto bg-white shadow-md rounded-lg">
+          </div>
+        ) : (
+          <div className="p-6 pt-5 max-w-4xl mx-auto bg-white shadow-md rounded-lg">
             <h2 className="text-4xl font-bold mb-4 flex justify-center underline mb-5">
               Order Details
             </h2>
@@ -181,7 +185,7 @@ const OrderPage = () => {
                 />
               </div>
             </div>
-  
+
             <h3 className="text-xl font-semibold mb-4">Your Order</h3>
             <div className="overflow-x-auto">
               {cart.map((product, index) => (
@@ -190,7 +194,7 @@ const OrderPage = () => {
                   className="flex mb-4 p-4 border border-gray-300 rounded-lg shadow-sm bg-gray-50"
                 >
                   <img
-                    src={`http://localhost:8000${product.image_url}`}
+                    src={`https://backend-stivio.onrender.com${product.image_url}`}
                     alt={product.name}
                     className="w-24 h-24 object-cover rounded-lg mr-4"
                   />
@@ -213,7 +217,7 @@ const OrderPage = () => {
                 </div>
               ))}
             </div>
-  
+
             <div className="mt-6 p-4 border-t border-gray-300">
               <h3 className="text-2xl font-semibold mb-2">Invoice:</h3>
               <div className="pl-5 text-lg">
@@ -244,8 +248,7 @@ const OrderPage = () => {
               </button>
             )}
           </div>
-        }
-   
+        )}
       </div>
     </>
   );
