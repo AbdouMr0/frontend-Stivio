@@ -87,13 +87,12 @@ const Products = () => {
               key={product.id}
               className="border-solid border-2 border-gray-400 mx-1 mt-6 shadow-xl flex flex-col rounded-lg bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white"
             >
-              <a>
-                <img
-                  className="rounded-t-lg w-full"
-                  src={`https://backend-stivio.onrender.com${product.image_url}`}
-                  alt={product.name}
-                />
-              </a>
+              <img
+                key={product.id}
+                src={`https://backend-stivio.onrender.com${product.image_url}`}
+                alt={product.name}
+                className="w-full h-auto rounded-lg object-cover"
+              />
               <hr />
               <div className="pt-1 ps-2 bg-gradient-to-br from-gray-100 to-gray-300 rounded-r-lg w-75">
                 <h5 className="font-mono text-2xl font-bold text-gray-800">{product.name}</h5>
