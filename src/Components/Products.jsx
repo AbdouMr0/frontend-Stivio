@@ -90,7 +90,7 @@ const Products = () => {
               <a>
                 <img
                   className="rounded-t-lg w-full"
-                  src={`http://localhost:8000${product.image_url}`}
+                  src={`https://backend-stivio.onrender.com${product.image_url}`}
                   alt={product.name}
                 />
               </a>
